@@ -1,0 +1,31 @@
+using System;
+
+namespace Apaxiaaans
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Store Input
+            string originalname = Console.ReadLine();
+
+            //Start to create edited name 
+            string editedname = originalname[0].ToString();
+            char currentletter = originalname[0];
+
+            //Check original name to delete recessive duplicates
+            for (int i = 0; i < originalname.Length; i++)
+            {
+                char letter = originalname[i];
+                if (letter != currentletter)
+                {
+                    editedname += letter;
+                }
+                currentletter = letter;
+            }
+            //Print editedname
+            Console.WriteLine(editedname);
+
+        }
+    }
+}
